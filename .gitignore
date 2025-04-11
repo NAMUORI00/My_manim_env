@@ -1,0 +1,44 @@
+# 모든 파일 무시
+*
+**/
+
+# 워크스페이스 폴더와 내용 추적
+!workspace/
+!workspace/**
+
+# 다음 폴더는 추적하지 않음
+workspace/manim_files/
+workspace/media/
+media/
+manim_files/
+
+# 데브컨테이너 설정 파일 추적
+!.devcontainer/
+!.devcontainer/**
+
+# 깃 관련 파일은 항상 추적
+!.gitignore
+!.git/
+!.git/**
+
+# 일반적인 임시 파일 및 로그 무시
+.DS_Store
+*.log
+*.tmp
+*.temp
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 미디어 파일 무시
+*.mp4
+*.mov
+*.avi
+*.mp3
+*.wav
+
+# 그 외 일반적인 빌드 결과물 무시
+*.o
+*.so
+*.out
+node_modules/
