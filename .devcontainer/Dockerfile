@@ -110,8 +110,9 @@ RUN . $CONDA_DIR/etc/profile.d/conda.sh && \
 # 필요한 Python 패키지 설치
 RUN . $CONDA_DIR/etc/profile.d/conda.sh && \
     conda activate pytorch_env && \
-    pip install --no-cache-dir -r /tmp/requirements.txt && \
-    pip install pycuda
+    pip install --no-cache-dir uv && \
+    uv pip install --no-cache -r /tmp/requirements.txt && \
+    uv pip install pycuda
 
 # 폰트 캐시 업데이트 및 한글 폰트 설정
 RUN fc-cache -fv && \
